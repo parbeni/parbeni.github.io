@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kapuka Gallery Replica</title>
+<style>
+    /* Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: #222;
+        color: #fff;
+    }
+
+    /* Fixed Top Header */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #c9ae6b; /* Exact golden yellow from video */
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #111;
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .hamburger {
+        font-size: 28px;
+        color: #111;
+        cursor: pointer;
+    }
+
+    /* Hero Section (KAPUKA Emblem) */
+    .hero {
+        margin-top: 60px; /* Push down below fixed header */
+        background-color: #444; /* Replace with your background image if desired */
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/800x400/333/333');
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 120px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: #e0e0e0;
+    }
+
+    /* Vertical Image Gallery */
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        display: block; /* Removes default bottom gap on images */
+        border-bottom: 2px solid #222; /* Subtle separation between photos */
+    }
+
+    /* Footer / Text Section */
+    .text-section {
+        background-color: #1f2122;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .text-list {
+        color: #469a9a; /* Teal color from video */
+        font-size: 22px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 12px;
+        color: #888;
+        background-color: #111;
+    }
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-logo">
+            <!-- You can replace the circle character with an actual SVG logo -->
+            <span>&#9788; EA FAM</span>
+        </div>
+        <div class="hamburger">&#9776;</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- REPLACE THIS SRC with your emblem/logo image link -->
+        <img src="https://via.placeholder.com/150/000000/FFFFFF?text=Emblem" alt="Kapuka Emblem">
+        <h1>KAPUKA</h1>
+    </section>
+
+    <!-- Full-Width Image Gallery -->
+    <section class="gallery">
+        <!-- REPLACE THESE SRC LINKS WITH YOUR OWN PHOTOS -->
+        <img src="https://via.placeholder.com/800x1000/555/fff?text=Your+Photo+1" alt="Gallery Photo 1">
+        <img src="https://via.placeholder.com/800x1200/666/fff?text=Your+Photo+2" alt="Gallery Photo 2">
+        <img src="https://via.placeholder.com/800x800/777/fff?text=Your+Photo+3" alt="Gallery Photo 3">
+        <img src="https://via.placeholder.com/800x1100/444/fff?text=Your+Photo+4" alt="Gallery Photo 4">
+    </section>
+
+    <!-- Text Names List Section -->
+    <section class="text-section">
+        <div class="text-list">
+            Líbano<br>
+            Familia Londoño<br>
+            Hermanas Palacio<br>
+            Zipaquirá<br>
+            Inés Satizábal<br>
+            Santa Marta
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>GALERÍA EN CONSTRUCCIÓN</p>
+        <p>La información recolectada es producto de un trabajo...</p>
+    </footer>
+
+</body>
+</html>
