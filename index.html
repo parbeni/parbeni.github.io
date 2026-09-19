@@ -1,167 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kapuka Gallery Replica</title>
-<style>
-    /* Reset and Base Styles */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f1eadb" />
+    <meta name="description" content="Parbeni Parivar — a living family archive from 1700 to today." />
+    <title>Parbeni Parivar — Our family, through time</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#archive">Skip to the archive</a>
 
-    body {
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        background-color: #222;
-        color: #fff;
-    }
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Parbeni Parivar home">
+        <span class="brand-mark" aria-hidden="true">प</span>
+        <span>
+          <strong>Parbeni Parivar</strong>
+          <small>पारिवारिक अभिलेख</small>
+        </span>
+      </a>
 
-    /* Fixed Top Header */
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #c9ae6b; /* Exact golden yellow from video */
-        height: 60px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
-        z-index: 1000;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#story">Our story</a>
+        <a href="#archive">Archive</a>
+        <a href="#timeline">Timeline</a>
+      </nav>
 
-    .header-logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #111;
-        font-weight: bold;
-        font-size: 20px;
-        letter-spacing: 1px;
-    }
-
-    .hamburger {
-        font-size: 28px;
-        color: #111;
-        cursor: pointer;
-    }
-
-    /* Hero Section (KAPUKA Emblem) */
-    .hero {
-        margin-top: 60px; /* Push down below fixed header */
-        background-color: #444; /* Replace with your background image if desired */
-        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/800x400/333/333');
-        background-size: cover;
-        background-position: center;
-        height: 40vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero img {
-        width: 120px;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    .hero h1 {
-        font-size: 24px;
-        font-weight: 300;
-        letter-spacing: 2px;
-        color: #e0e0e0;
-    }
-
-    /* Vertical Image Gallery */
-    .gallery {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .gallery img {
-        width: 100%;
-        height: auto;
-        display: block; /* Removes default bottom gap on images */
-        border-bottom: 2px solid #222; /* Subtle separation between photos */
-    }
-
-    /* Footer / Text Section */
-    .text-section {
-        background-color: #1f2122;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .text-list {
-        color: #469a9a; /* Teal color from video */
-        font-size: 22px;
-        line-height: 1.5;
-        margin-bottom: 30px;
-    }
-
-    .footer {
-        text-align: center;
-        padding: 20px;
-        font-size: 12px;
-        color: #888;
-        background-color: #111;
-    }
-</style>
-</head>
-<body>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="header-logo">
-            <!-- You can replace the circle character with an actual SVG logo -->
-            <span>&#9788; EA FAM</span>
-        </div>
-        <div class="hamburger">&#9776;</div>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" data-menu-button>
+        <span></span><span></span>
+      </button>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <!-- REPLACE THIS SRC with your emblem/logo image link -->
-        <img src="https://via.placeholder.com/150/000000/FFFFFF?text=Emblem" alt="Kapuka Emblem">
-        <h1>KAPUKA</h1>
-    </section>
+    <div class="mobile-menu" data-mobile-menu hidden>
+      <a href="#story">Our story <span>01</span></a>
+      <a href="#archive">Archive <span>02</span></a>
+      <a href="#timeline">Timeline <span>03</span></a>
+      <p>स्मृतियाँ जो हमें जोड़ती हैं<br />Memories that keep us connected.</p>
+    </div>
 
-    <!-- Full-Width Image Gallery -->
-    <section class="gallery">
-        <!-- REPLACE THESE SRC LINKS WITH YOUR OWN PHOTOS -->
-        <img src="image1.jpeg" alt="Gallery Photo 1">
-        <img src="image2.jpeg" alt="Gallery Photo 2">
-        <img src="image3.jpeg" alt="Gallery Photo 3">
-        <img src="image4.jpeg" alt="Gallery Photo 4">
-        <img src="image5.jpeg" alt="Gallery Photo 5">
-        <img src="image6.jpeg" alt="Gallery Photo 6">
-        <img src="image7.jpeg" alt="Gallery Photo 7">
-    </section>
-
-    <!-- Text Names List Section -->
-    <section class="text-section">
-        <div class="text-list">
-            Líbano<br>
-            Familia Londoño<br>
-            Hermanas Palacio<br>
-            Zipaquirá<br>
-            Inés Satizábal<br>
-            Santa Marta
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> A living family archive · 1700—Today</p>
+          <h1 id="hero-title">We come from<br /><em>somewhere.</em></h1>
+          <p class="hero-intro">Names, faces and everyday moments—kept together so every generation can know the ones who came before.</p>
+          <a class="round-link" href="#archive" aria-label="Explore the family archive">
+            <span>Explore<br />the archive</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
+          </a>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>GALERÍA EN CONSTRUCCIÓN</p>
-        <p>La información recolectada es producto de un trabajo...</p>
+        <div class="hero-portrait" aria-label="Featured photograph from the family archive">
+          <img src="assets/image1.jpeg" alt="An elderly couple standing together in their family home" />
+          <div class="portrait-caption">
+            <span>From the family album</span>
+            <span>Undated</span>
+          </div>
+        </div>
+
+        <aside class="hero-note">
+          <span class="sun-symbol" aria-hidden="true">✦</span>
+          <p>हर तस्वीर<br />एक कहानी</p>
+          <small>Every photograph<br />holds a story.</small>
+        </aside>
+      </section>
+
+      <section class="marquee" aria-label="Archive themes">
+        <div class="marquee-track">
+          <span>Roots</span><i>✦</i><span>Journeys</span><i>✦</i><span>Rituals</span><i>✦</i><span>Everyday life</span><i>✦</i>
+          <span aria-hidden="true">Roots</span><i aria-hidden="true">✦</i><span aria-hidden="true">Journeys</span><i aria-hidden="true">✦</i><span aria-hidden="true">Rituals</span><i aria-hidden="true">✦</i><span aria-hidden="true">Everyday life</span><i aria-hidden="true">✦</i>
+        </div>
+      </section>
+
+      <section class="story-section" id="story">
+        <div class="section-number">01 / Our story</div>
+        <div class="story-copy">
+          <p class="hindi-line">वंश केवल नामों से नहीं, यादों से बनता है।</p>
+          <h2>A home for the stories<br />we carry forward.</h2>
+          <div class="story-columns">
+            <p>This archive brings together photographs, names, places and memories from more than three centuries of the Parbeni family.</p>
+            <p>It is made to be explored together—on a phone at the dinner table, on a tablet with grandparents, or on a big screen with the whole family.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="archive-section" id="archive" aria-labelledby="archive-title">
+        <div class="archive-heading">
+          <div>
+            <p class="section-number">02 / The archive</p>
+            <h2 id="archive-title">Faces of<br /><em>our family.</em></h2>
+          </div>
+          <div class="archive-tools">
+            <label class="search-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>
+              <input type="search" placeholder="Search the archive" aria-label="Search the family archive" data-search />
+            </label>
+            <div class="filters" role="group" aria-label="Filter photographs by era">
+              <button class="is-active" type="button" data-filter="all">All</button>
+              <button type="button" data-filter="before-1950">Before 1950</button>
+              <button type="button" data-filter="1950-1999">1950—1999</button>
+              <button type="button" data-filter="2000-now">2000—Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-grid" data-grid>
+          <article class="photo-card card-tall" data-era="1950-1999" data-searchable="family couple home ancestors">
+            <button type="button" data-photo="assets/image1.jpeg" data-title="Together at home" data-meta="Family album · Date unknown">
+              <img src="assets/image1.jpeg" alt="An elderly couple standing together in their home" loading="lazy" />
+              <span class="card-overlay"><strong>Together at home</strong><small>Family album · Date unknown</small></span>
+            </button>
+          </article>
+
+          <article class="photo-card card-wide" data-era="1950-1999" data-searchable="portrait grandmother 1970 heritage">
+            <button type="button" data-photo="assets/image2.jpeg" data-title="A portrait from 1970" data-meta="Family album · 1970">
+              <img src="assets/image2.jpeg" alt="An elderly woman in a sari standing in a traditional courtyard" loading="lazy" />
+              <span class="card-overlay"><strong>A portrait from 1970</strong><small>Family album · 1970</small></span>
+            </button>
+          </article>
+
+          <article class="photo-card card-square" data-era="2000-now" data-searchable="elder portrait gathering family">
+            <button type="button" data-photo="assets/image3.jpeg" data-title="At a family gathering" data-meta="Family album · Recent years">
+              <img src="assets/image3.jpeg" alt="Portrait of a family elder at a gathering" loading="lazy" />
+              <span class="card-overlay"><strong>At a family gathering</strong><small>Family album · Recent years</small></span>
+            </button>
+          </article>
+
+          <article class="photo-card card-tall" data-era="2000-now" data-searchable="kamla devi jain nemichand portrait 2004">
+            <button type="button" data-photo="assets/image4.jpeg" data-title="Smt. Kamla Devi Jain" data-meta="In loving memory · 2004">
+              <img src="assets/image4.jpeg" alt="Formal seated portrait of Smt. Kamla Devi Jain" loading="lazy" />
+              <span class="card-overlay"><strong>Smt. Kamla Devi Jain</strong><small>In loving memory · 2004</small></span>
+            </button>
+          </article>
+
+          <article class="photo-card card-tall" data-era="2000-now" data-searchable="nemichand jain panna lal portrait 2003">
+            <button type="button" data-photo="assets/image5.jpeg" data-title="Shri Nemichand Jain" data-meta="In loving memory · 2003">
+              <img src="assets/image5.jpeg" alt="Formal seated portrait of Shri Nemichand Jain" loading="lazy" />
+              <span class="card-overlay"><strong>Shri Nemichand Jain</strong><small>In loving memory · 2003</small></span>
+            </button>
+          </article>
+
+          <article class="photo-card card-wide" data-era="1950-1999" data-searchable="grandmother child generations studio portrait">
+            <button type="button" data-photo="assets/image6.jpeg" data-title="Across generations" data-meta="Studio portrait · Date unknown">
+              <img src="assets/image6.jpeg" alt="A grandmother holding a young child in a studio portrait" loading="lazy" />
+              <span class="card-overlay"><strong>Across generations</strong><small>Studio portrait · Date unknown</small></span>
+            </button>
+          </article>
+
+          <article class="photo-card card-square" data-era="2000-now" data-searchable="woman portrait sari family elder">
+            <button type="button" data-photo="assets/image7.jpeg" data-title="A family elder" data-meta="Family album · Recent years">
+              <img src="assets/image7.jpeg" alt="Portrait of a family elder wearing a teal sari" loading="lazy" />
+              <span class="card-overlay"><strong>A family elder</strong><small>Family album · Recent years</small></span>
+            </button>
+          </article>
+        </div>
+
+        <p class="empty-state" data-empty hidden>No photographs match this search yet.</p>
+      </section>
+
+      <section class="timeline-section" id="timeline" aria-labelledby="timeline-title">
+        <div class="timeline-copy">
+          <p class="section-number">03 / Through time</p>
+          <h2 id="timeline-title">Three centuries.<br />One unfolding story.</h2>
+          <p>Select an era to see how the family archive grows across generations.</p>
+        </div>
+        <div class="timeline-list">
+          <button type="button" data-timeline-filter="before-1950"><span>1700—1899</span><small>Origins & early records</small><b>→</b></button>
+          <button type="button" data-timeline-filter="before-1950"><span>1900—1949</span><small>A changing India</small><b>→</b></button>
+          <button type="button" data-timeline-filter="1950-1999"><span>1950—1999</span><small>New homes & generations</small><b>→</b></button>
+          <button type="button" data-timeline-filter="2000-now"><span>2000—Today</span><small>The living archive</small><b>→</b></button>
+        </div>
+      </section>
+
+      <section class="contribute-section">
+        <span class="sun-symbol" aria-hidden="true">✦</span>
+        <p>Every family member<br />holds a missing piece.</p>
+        <h2>Have a photograph<br />or a story to add?</h2>
+        <a href="mailto:family@example.com?subject=Parbeni%20family%20archive">Share with the family <span>↗</span></a>
+        <small>Replace this email address with your family archive email.</small>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand"><span class="brand-mark">प</span><strong>Parbeni Parivar</strong></div>
+      <p>Made with care for every generation.<br />हमारी कहानी, हमारी विरासत।</p>
+      <a href="#top">Back to top ↑</a>
+      <small>Family archive · 1700—Today</small>
     </footer>
 
-</body>
+    <dialog class="lightbox" data-lightbox>
+      <button class="lightbox-close" type="button" aria-label="Close photograph" data-lightbox-close>×</button>
+      <figure>
+        <img src="" alt="" data-lightbox-image />
+        <figcaption><strong data-lightbox-title></strong><span data-lightbox-meta></span></figcaption>
+      </figure>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
 </html>
